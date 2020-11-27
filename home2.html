@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ <p>
+ 	<a href="https://www.fyber.com/" target="_blank">
+    	<img src = "fyb.jpeg" width=300px height=250px alt = "Fyber" />
+	</a>
+ </p>
+
+
+    <label>Response: </label>
+    <input type="text" id="response">
+
+<button type="button" id="send_request" onclick="send_request();">SEND </button>
+
+<script type="text/javascript">
+    function send_request() {
+        var xhr = new XMLHttpRequest();
+        var resultText = XMLHttpRequest.responseText;
+        xhr.open('get', 'http://google.com', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+xhr.onload = function () {
+    if (xhr.readyState === xhr.DONE) {
+        if (xhr.status === 200) {
+            console.log(xhr.response);
+            console.log(xhr.responseText);
+        }
+    }
+};
+
+xhr.send(null);
+        document.getElementById('response').value = resultText;
+    }
+
+</script>
+
+</body>
+</html> 

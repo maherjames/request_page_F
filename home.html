@@ -2,9 +2,30 @@
 <html>
 <body>
 
-<h1>test</h1>
+ <p>
+ 	<a href="https://www.fyber.com/" target="_blank">
+    	<img src = "fyb.jpeg" width=300px height=250px alt = "Fyber" />
+	</a>
+ </p>
 
-<p>paragraph</p>
+
+    <label>Response: </label>
+    <input type="text" id="response">
+
+<button type="button" id="send_request" onclick="send_request();">SEND </button>
+
+<script type="text/javascript">
+    function send_request() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'http://google.com', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.send();
+        //console.log("3")
+        //console.log(xhr.response)
+        document.getElementById('response').value = xhr.response;
+    }
+
+</script>
 
 </body>
-</html>
+</html> 

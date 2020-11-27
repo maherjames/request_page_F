@@ -20,8 +20,8 @@
         xhr.open('get', 'https://maherjames.github.io/request_page_F/home.html', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.send();
-        console.log("3")
-        console.log(xhr.response)
+        console.log(xhr.response);
+        console.log(xhr.responseText);
         document.getElementById('response').value = xhr.response;
     }
 

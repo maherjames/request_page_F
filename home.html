@@ -17,13 +17,12 @@
 <script type="text/javascript">
     function send_request() {
         var xhr = new XMLHttpRequest();
-	document.getElementById('response').value = xhr.response;
         xhr.open('get', 'https://maherjames.github.io/request_page_F/home.html', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.send();
         console.log(xhr.response);
         console.log(xhr.responseText);
-        //document.getElementById('response').value = xhr.response;
+        document.getElementById('response').value = xhr.response;
     }
 
 </script>
